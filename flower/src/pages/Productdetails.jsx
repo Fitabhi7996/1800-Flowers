@@ -25,14 +25,15 @@ setShift(e.target.value);
         <div className="product">
             <div className="imgages">
                 <div>
-                    <img src="https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/90577mprsv1sc9x.jpg?width=100&height=110&quality=90&auto=webp&optimize={medium}" alt="flower" width="90%" />
-                    <img src="https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/148381alt_viewc.jpg?width=100&height=110&quality=70&auto=webp&optimize={medium}" alt="flow" width="90%" />
+                    <img src="https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192269x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" alt="flower" width="90%" />
+                    <img src="https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}" alt="flow" width="90%" />
                 </div>
             </div>
             <div className="photo">
                 {
-                    shift=="false"?<img src="https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/90577mprsv1sc9x.jpg?width=100&height=110&quality=90&auto=webp&optimize={medium}" alt="photos" width="100%" />:<img src="https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/148381alt_viewc.jpg?width=100&height=110&quality=70&auto=webp&optimize={medium}" alt="photos" width="100%" />
+                    shift=="false"?<img src="https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192269x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" alt="photos" width="100%" />:<img src="https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}" alt="photos" width="100%" />
                 }
+                {/* <img src="https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}" alt="photos" width="100%" /> */}
             </div>
             <div className="info">
                 <h2>Birthday Wishes Flower Cake® Vibrant</h2>
