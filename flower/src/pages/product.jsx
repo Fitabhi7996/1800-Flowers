@@ -16,11 +16,11 @@ import {
   Text,
   WrapItem,
 } from "@chakra-ui/react";
-import { Heading, Image, SimpleGrid, Stack } from "@chakra-ui/react";
+import {  Image, SimpleGrid, Stack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 import {
-  ArrowRightIcon,
+  
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
@@ -29,7 +29,7 @@ import { Link } from "react-router-dom";
 
 const BirthdayCake = () => {
   let [prod, setprod] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  
   const [count, setcount] = useState(0);
   const [query, setQuery] = useState("");
 
@@ -199,7 +199,7 @@ const BirthdayCake = () => {
         >
           <div
             style={{
-              marginLeft: "10px",
+            
               //   border: "1px solid red",
               height: "280px",
               width: "270px",
