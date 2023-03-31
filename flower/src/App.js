@@ -7,14 +7,16 @@ import BirthdayCake from './pages/product';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      {/* <BirthdayCake /> */}
 
+    <div className="App">
       <ChakraProvider>
-        <Footer />
+      {<Navbar />}
+      {/* <BirthdayCake /> */}
+        {/* <Footer /> */}
       </ChakraProvider>
+      
     </div>
+
   );
 }
 

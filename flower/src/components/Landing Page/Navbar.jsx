@@ -4,10 +4,12 @@ import logo from "./images/logo.png"
 import signIn from "./images/sign-in.svg"
 import truck from "./images/truck.svg"
 import cartIcon from "./images/cartIcon.svg"
-import { Link } from 'react-router-dom'
+
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons"
+import DropDown from './Dropdown'
 const Navbar = () => {
   return (
-    <div>
+    <div style={{ marginBottom: "15px" }}>
       <div className={style.first} >
         <div>
 
@@ -81,8 +83,7 @@ const Navbar = () => {
 
       {/* ====================================DropDown=============================================== */}
       <div className={style.dropdown}>
-        <h1>Mid section</h1>
-        {/* <Link>Easter</Link> */}
+        <DropDown/>
       </div>
     </div>
 
