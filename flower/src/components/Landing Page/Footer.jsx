@@ -5,11 +5,11 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  Flex,
   Tag,
+  Img,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+
 
 // const Logo = (props: any) => {
 //   return (
@@ -30,9 +30,9 @@ import { ReactNode } from 'react';
 //   );
 // };
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+    <Text fontWeight={'500'} fontSize="17px" mb={2}>
       {children}
     </Text>
   );
@@ -43,12 +43,12 @@ export default function Footer() {
     <Box
     bg="#65388b" color="white">
       <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, sm: 3, md: 5 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>MORE WAYS TO SHOP</ListHeader>
-            <Link href={'#'}>Flower Delivery Same-Day</Link>
+            <Link href={'#'} fontSize="13px">Flower Delivery Same-Day</Link>
             <Stack direction={'row'} align={'center'} spacing={2}>
-              <Link href={'#'}>Flowers Arrangements</Link>
+              <Link href={'#'} fontSize="13px">Flowers Arrangements</Link>
               <Tag
                 size={'sm'}
                 bg={useColorModeValue('green.300', 'green.800')}
@@ -57,48 +57,59 @@ export default function Footer() {
                 New
               </Tag>
             </Stack>
-            <Link href={'#'}>Sympathy Flowers & Gifts</Link>
-            <Link href={'#'}>Roses</Link>
-            <Link href={'#'}>Birthday Flowers & Gifts</Link>
-            <Link href={'#'}>Flower Subscriptions</Link>
-            <Link href={'#'}>Plants</Link>
-            <Link href={'#'}>Gift Baskets & Food</Link>
-            <Link href={'#'}>Easter Flowers</Link>
-            <Link href={'#'}>Mother’s Day Flowers</Link>
-            <Link href={'#'}>International Flower Delivery</Link>
-            <Link href={'#'}>Find a Local Florist</Link>
-            <Link href={'#'}>Corporate Gifts</Link>
-            <Link href={'#'}>Chocolate Covered Strawberries</Link>
-            <Link href={'#'}>Marketplace Sellers</Link>
-            <Link href={'#'}>Sitemap</Link>
+            <Link href={'#'} fontSize="13px">Sympathy Flowers & Gifts</Link>
+            <Link href={'#'}fontSize="13px">Roses</Link>
+            <Link href={'#'}fontSize="13px">Birthday Flowers & Gifts</Link>
+            <Link href={'#'}fontSize="13px">Flower Subscriptions</Link>
+            <Link href={'#'}fontSize="13px">Plants</Link>
+            <Link href={'#'}fontSize="13px">Gift Baskets & Food</Link>
+            <Link href={'#'}fontSize="13px">Easter Flowers</Link>
+            <Link href={'#'}fontSize="13px">Mother’s Day Flowers</Link>
+            <Link href={'#'}fontSize="13px">International Flower Delivery</Link>
+            <Link href={'#'}fontSize="13px">Find a Local Florist</Link>
+            <Link href={'#'}fontSize="13px">Corporate Gifts</Link>
+            <Link href={'#'}fontSize="13px">Chocolate Covered Strawberries</Link>
+            <Link href={'#'}fontSize="13px">Marketplace Sellers</Link>
+            <Link href={'#'}fontSize="13px">Sitemap</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>CUSTOMER SERVICE</ListHeader>
-            <Link href={'#'}>Customer Service Us</Link>
-            <Link href={'#'}>COVID-19 Updates</Link>
-            <Link href={'#'}>eGift Cards</Link>
-            <Link href={'#'}>Contact Us Us</Link>
-            <Link href={'#'}>Allergy Warning</Link>
-            <Link href={'#'}>Funeral/Sympathy Advisors</Link>
-            <Link href={'#'}>Smile Guarantee</Link>
-            <ListHeader>VETERANS ADVANTAGE</ListHeader>
-            <Link href={'#'}>Get Military Discounts Everyday</Link>
+            <Link href={'#'}fontSize="13px">Customer Service Us</Link>
+            <Link href={'#'}fontSize="13px">COVID-19 Updates</Link>
+            <Link href={'#'}fontSize="13px">eGift Cards</Link>
+            <Link href={'#'}fontSize="13px">Contact Us Us</Link>
+            <Link href={'#'}fontSize="13px">Allergy Warning</Link>
+            <Link href={'#'}fontSize="13px">Funeral/Sympathy Advisors</Link>
+            <Link href={'#'}fontSize="13px">Smile Guarantee</Link>
+            <ListHeader >VETERANS ADVANTAGE</ListHeader>
+            <Link href={'#'} fontSize="13px">Get Military Discounts Everyday</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>OUR STORES</ListHeader>
-            <Link href={'#'}>Store Locator</Link>
-            <Link href={'#'}>Franchise Opportunities</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Law Enforcement</Link>
-            <Link href={'#'}>Status</Link>
+            <Link href={'#'} fontSize="13px">Store Locator</Link>
+            <Link href={'#'} fontSize="13px">Franchise Opportunities</Link>
+            <Link href={'#'} fontSize="13px">Terms of Service</Link>
+            <Link href={'#'} fontSize="13px">Law Enforcement</Link>
+            <Link href={'#'} fontSize="13px">Status</Link>
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
-            <Link href={'#'}>Twitter</Link>
-            <Link href={'#'}>Dribbble</Link>
-            <Link href={'#'}>Instagram</Link>
-            <Link href={'#'}>LinkedIn</Link>
+            <ListHeader>CORPORATE</ListHeader>
+            <Link href={'#'} fontSize="13px">About Us</Link>
+            <Link href={'#'} fontSize="13px">Our Brands</Link>
+            <Link href={'#'} fontSize="13px">Social Responsibility</Link>
+            <Link href={'#'} fontSize="13px">Careers</Link>
+            <Link href={'#'} fontSize="13px">News & Media</Link>
+            <Link href={'#'} fontSize="13px">Investors</Link>
+          </Stack>
+          <Stack align={'flex-start'}>
+            <ListHeader>FOLLOW US</ListHeader>
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} gap="7px">
+              <Img src = "https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt787e53ec7675db95/5ee1016e26fd9f3b64a5abe7/social-icon-twitter.png"></Img>
+              <Img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt71c1a01174910073/5ee101831579a83a8b80b9ad/social-icon-facebook.png"></Img>
+              <Img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt78b7b39043ac2de3/5ee101965cffd6317204ad4a/social-icon-instagram.png"></Img>
+              <Img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt6ae8236f023d5359/5ee101a4f2c45903a4be0b8b/social-icon-pinterest.png"></Img>
+              <Img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltbd439ba082738790/5ee101b758284c442bf7faea/social-icon-youtube.png"></Img>
+            </SimpleGrid>
           </Stack>
         </SimpleGrid>
       </Container>
