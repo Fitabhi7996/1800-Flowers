@@ -1,5 +1,6 @@
 import React from "react";
 import "..//pages/Login.css";
+import img from "../images/Colorful Illustration Florist Logo.png";
 const Login = () => {
   const [loginUser, setLoginUser] = React.useState({
     email: "",
@@ -27,12 +28,18 @@ const Login = () => {
   };
   return (
     <div className="login-container">
-      <div className="right"></div>
+      <div className="right">
+        <img src={img} alt="" />
+        <h3>Welcome Back!</h3>
+        <h2>CELEBRATIONS <br/>
+          FAMILY OF BRANDS</h2>
+      </div>
       <div className="left">
         {" "}
         <form onSubmit={verifyLogin} className="form">
           <h3>Sign In</h3>
           <p>Not registered? Create Account</p>
+          <label htmlFor="">E-mail</label>
           <input
             onChange={(e) =>
               setLoginUser({ ...loginUser, email: e.target.value })
@@ -42,6 +49,7 @@ const Login = () => {
             name="email"
             placeholder="Enter your email"
           />
+          <label htmlFor="">Password</label>
           <input
             onChange={(e) =>
               setLoginUser({ ...loginUser, password: e.target.value })
@@ -51,13 +59,15 @@ const Login = () => {
             name="password"
             placeholder="Enter your Password"
           />
-          <button>Submit now</button>
+          <button className="submit">Sign In</button>
           <p>
             By continuing, you agree to our Terms of Use and Privacy Notice.
           </p>
           <label htmlFor="">Or sign in with</label>
-          <button>Sign In With Facebook</button>
-          <button>Sign In With Google</button>
+          <div className="social">
+            <button className="facebook">Sign In With Facebook</button>
+            <button className="google">Sign In With Google</button>
+          </div>
         </form>
       </div>
     </div>
