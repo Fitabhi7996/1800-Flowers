@@ -70,9 +70,6 @@ export const Products = () => {
   return (
     <>
   
-      
-      
-      
       <Box display={"flex"} gap={"20px"} color={"white"} mt={"30px"}>
         <Button
           backgroundColor={"#65388B"}
@@ -222,7 +219,7 @@ export const Products = () => {
 
                 <u>
                   <p
-                    style={cat == "Easter" ? { color: "blue" } : null}
+                    style={cat === "Easter" ? { color: "blue" } : null}
                     onClick={() => setCat("Easter")}
                   >
                     Easter Color Rose
@@ -231,7 +228,7 @@ export const Products = () => {
 
                 <u>
                   <p
-                    style={cat == "Red Rose" ? { color: "red" } : null}
+                    style={cat === "Red Rose" ? { color: "red" } : null}
                     onClick={() => setCat("Red Rose")}
                   >
                     Red Color Rose
@@ -239,7 +236,7 @@ export const Products = () => {
                 </u>
                 <u>
                   <p
-                    style={cat == "pink Rose" ? { color: "green" } : null}
+                    style={cat === "pink Rose" ? { color: "green" } : null}
                     onClick={() => setCat("Pink Rose")}
                   >
                     Pink Color Rose
@@ -247,7 +244,7 @@ export const Products = () => {
                 </u>
                 <u>
                   <p
-                    style={cat == "Orange Rose" ? { color: "orange" } : null}
+                    style={cat === "Orange Rose" ? { color: "orange" } : null}
                     onClick={() => setCat("Orange Rose")}
                   >
                     Orange Color Rose
@@ -255,7 +252,7 @@ export const Products = () => {
                 </u>
                 <u>
                   <p
-                    style={cat == "White Rose" ? { color: "white" } : null}
+                    style={cat === "White Rose" ? { color: "white" } : null}
                     onClick={() => setCat("White Rose")}
                   >
                     White Color Rose
@@ -263,7 +260,7 @@ export const Products = () => {
                 </u>
                 <u>
                   <p
-                    style={cat == "Purple Rose" ? { color: "purple" } : null}
+                    style={cat === "Purple Rose" ? { color: "purple" } : null}
                     onClick={() => setCat("Purple Rose")}
                   >
                     Purple Color Rose
@@ -272,7 +269,7 @@ export const Products = () => {
 
                 <u>
                   <p
-                    style={cat == "Yellow Rose" ? { color: "yellow" } : null}
+                    style={cat === "Yellow Rose" ? { color: "yellow" } : null}
                     onClick={() => setCat("Yellow Rose")}
                   >
                     Yellow Color Rose
@@ -413,6 +410,7 @@ export const Products = () => {
             height: "10%",
           }}
         >
+        
           {data.map((item) => (
             <ProductCard key={item.id} {...item} />
           ))}

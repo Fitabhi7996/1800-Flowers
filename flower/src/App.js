@@ -1,12 +1,13 @@
 
-import { ChakraProvider } from '@chakra-ui/react';
+
 import './App.css';
+import { Products } from './pages/Products';
 
 
 function App() {
   return (
     <div className="App">
-
+<Products/>
     </div>
   );
 }
