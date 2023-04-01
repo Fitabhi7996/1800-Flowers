@@ -129,9 +129,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ===========================================Made me Smile==================================== */}
+       {/* ===========================================Made me Smile========================================== */}
       <div>
-        
+
         <div>
             <div>
                 <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltbcf30ced0a418919/63fcd5c452820c02597c04e3/ugc-image-fields-of-europe-spring.jpg?quality=85&auto=webp&optimize={medium}" alt="social"></img>
@@ -145,6 +145,7 @@ const Home = () => {
             <div>
                 <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt205c41fe8e8ce8f6/63fcd65eff1d0646c816f367/ugc-image-marble-queen-pothos-plant.jpg?quality=85&auto=webp&optimize={medium}" alt="social"></img>
             </div>
+            
         </div>
       </div>
 
