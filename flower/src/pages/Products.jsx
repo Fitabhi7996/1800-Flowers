@@ -7,6 +7,8 @@ import {
   MenuList,
   Text,
   WrapItem,
+  Box,
+  Input
 } from "@chakra-ui/react";
 
 import { ChevronDownIcon } from "@chakra-ui/icons";
@@ -16,6 +18,11 @@ import ProductCard from "../components/ProductCard";
 export const Products = () => {
   const [cat, setCat] = React.useState("Easter");
   const [data, setData] = useState([]);
+  const [count,setCount]=useState(0);
+  
+  const [val,setVal]=useState("");
+
+
 
   const getData = () => {
     fetch(`https://wild-blue-lemur-sari.cyclic.app/flowers?category=${cat}`)
@@ -30,9 +37,73 @@ export const Products = () => {
     getData();
   }, [cat]);
 
+
+  const hightolow= () => {
+    setCount(count + 1);
+    let highdata = data.sort((a, b) => {
+      return +b.price - +a.price;
+    });
+
+    setData(highdata);
+   
+  };
+
+  const lowtohigh = () => {
+    setCount(count + 1);
+    let lowdata = data.sort((a, b) => {
+      return +a.price - +b.price;
+    });
+
+    setData(lowdata);
+  };
+
+  const handleInputChange = (event) => {
+    const val= event.target.value.toLowerCase();
+    setVal(val);
+    const filteredData = data.filter((item) =>
+      item.title.includes(val)
+    );
+    setData(filteredData);
+  };
+
+
   return (
     <>
-      <div style={{ width: "auto", display: "flex" }}>
+  
+      
+      
+      
+      <Box display={"flex"} gap={"20px"} color={"white"} mt={"30px"}>
+        <Button
+          backgroundColor={"#65388B"}
+          ml={["18%", "25%", "35%", "42%"]}
+          onClick={() => lowtohigh()}
+          _hover={{
+            backgroundColor: "#65388B",
+          }}
+        >
+          Low to High
+        </Button>
+        <Button
+          backgroundColor={"#65388B"}
+          onClick={() => hightolow()}
+          _hover={{
+            backgroundColor: "#65388B",
+          }}
+        >
+          High to Low
+        </Button>
+
+        <Input w={"30%"} border={"1px solid grey"}
+              type="text"
+              value={val}
+              onChange={handleInputChange}
+              placeholder="Search......"
+            />
+      </Box>
+      <br />
+      
+      <div style={{ width: "auto", display: "flex" ,height:"auto"}}>
         {/* <Navbar/> */}
 
         <div style={{ display: "flex", gap: "25px", width: "30%" }}>
@@ -143,9 +214,10 @@ export const Products = () => {
                 width: "90%",
                 marginTop: "10px",
                 cursor: "pointer",
+                marginLeft:"14px",
               }}
             >
-              <div style={{ marginLeft: "15px" }}>
+              <div style={{ marginLeft: "30px" }}>
                 <Text as="b">SHOP ROSES BY COLOR</Text>
 
                 <u>
@@ -325,6 +397,20 @@ export const Products = () => {
               </div>
             </div>
           </div>
+
+          {/* <div> */}
+          {/* <div
+            style={{
+             border: "1px solid red",
+              height: "8000px",
+              width: "1030px",
+              backgroundColor: "#FFFFFF",
+            }}
+          >
+            
+          </div> */}
+
+          {/* </div> */}
         </div>
 
         <div
@@ -344,6 +430,14 @@ export const Products = () => {
           ))}
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr />
+      
+      
     </>
+   
   );
 };
