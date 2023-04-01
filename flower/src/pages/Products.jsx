@@ -398,19 +398,7 @@ export const Products = () => {
             </div>
           </div>
 
-          {/* <div> */}
-          {/* <div
-            style={{
-             border: "1px solid red",
-              height: "8000px",
-              width: "1030px",
-              backgroundColor: "#FFFFFF",
-            }}
-          >
-            
-          </div> */}
-
-          {/* </div> */}
+          
         </div>
 
         <div
