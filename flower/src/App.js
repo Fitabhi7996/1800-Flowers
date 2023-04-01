@@ -10,14 +10,18 @@ import { Products } from './pages/Products';
 
 function App() {
   return (
+  
     <div className="App">
+    
     <ChakraProvider>
       {<Navbar />}
       {/* <BirthdayCake /> */}
         {/* <Footer /> */}
       </ChakraProvider>
+      
 <Products/>
     </div>
+    
   );
 }
 
