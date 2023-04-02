@@ -81,8 +81,8 @@ const DesktopNav = () => {
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label} >
-          <Popover trigger={'hover'} placement={'bottom-start'} maxW="100%" >
-            <PopoverTrigger maxW="100%" >
+          <Popover trigger={'hover'} placement={'bottom-start'} >
+            <PopoverTrigger >
               <Link
                
                 p={2}
@@ -94,6 +94,7 @@ const DesktopNav = () => {
                   // textDecoration: 'none',
                   color: linkHoverColor,
                   borderBottom:"2px solid black",
+                  
                   // width:"100%"
                 }} key={navItem.MainId}>
                 {navItem.label}
@@ -102,16 +103,22 @@ const DesktopNav = () => {
 
             {navItem.children && (
               <PopoverContent
+                // _hover={{borderWidth: 0,
+                //   borderStyle: "solid",
+                //   boxSizing:"border-box",
+                //   wordWrap: "break-word",
+                //   width: "100%"
+                // }}
                 border={0}
                 boxShadow={'xl'}
                 bg={popoverContentBgColor}
                 p={4}
-                rounded={'xl'}
-                // Maxw="100%"
+                w ="100%"
+                // rounded={'xl'}
                 minW = {"100%"}
 
                 >
-                <Flex  gap="15px"  width={"100%"} m="auto">
+                <Flex  gap="15px" w="100%" justify={"start"}   m="auto">
 
                   {navItem.children.map((child) => (
                       <Box  w="18%">
@@ -120,7 +127,7 @@ const DesktopNav = () => {
                   ))}
                   {navItem?.imageData?.map((el)=>(
                       <Box  w="22%">
-                          <Img src={el.image}></Img>
+                          <Img src={el.image} w="100%"></Img>
                           <Link color="">{el.text}</Link>
                       </Box>
                   ))}
@@ -253,13 +260,13 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Easter',
           subLabel: ['Trending Design to inspire you',"Centerpieces","Flowers","Flower & Berries","Gift For Kids","Lilies","Plants","Spring Bulb Event:Free Gift"],
-          href: '#',
+          href: './Products',
         },
         {
             Subid:count++,
           label: 'Shop by Gourmet Food & Treats',
           subLabel: ['Baked Goods','Chocolate Covered Strawberries',"Easter Gift Basket & Chocolates","Fruit Bouquets","Prepared Meals","Wine Gift"],
-          href: '#',
+          href: './Products',
         },
       ],
 
@@ -276,13 +283,13 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Spring',
           subLabel: ['All Spring Flower & Gift',"Spring Bulb Event:Free Gift","Flowering Plants","Gardening Décor","Peonies","Tulips","Wreaths"],
-          href: '#',
+          href: './Products',
         },
         {
           Subid:count++,
         label: 'Seasonal Occasion',
         subLabel: ["Women's History Month",'Ramadan (3/12 - 4/21)',"Passover (4/5 - 4/13)","Easter (4/9)","National Sibling Day (4/10)"],
-        href: '#',
+        href: './Products',
       },
       ],
     },
@@ -295,20 +302,20 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Birthday',
           subLabel: ['All Birthday Gifts',"Birthday Best Seller","Birthday Gift Guide","Flower Subscription","Party Supllies","Plants"],
-          href: '#',
+          href: './Products',
         },
         
         {
           Subid:count++,
         label: 'Gift & More',
         subLabel: ["All Keep Safe Gift",'Gift Sets',"Jwelery","Teddy Bears & More","Tribute | Free Group Video"],
-        href: '#',
+        href: './Products',
       },
       {
           Subid:count++,
         label: 'Shop By Recipient',
         subLabel: ["Gift For Mom",'Gift For Her',"Gift For Kids","Gift For Wife","Gift For Husband"],
-        href: '#',
+        href: './Products',
       },
       ],
     },
@@ -323,13 +330,13 @@ const MobileNavItem = ({ label, children, href }) => {
           Subid:count++,
         label: 'Sympathy',
         subLabel: ['All Sympathy',"Empathy Gifts","Faith-Inspired Gifts","Memorial Gardensr","Pet Sympathy Gifts","Remembrance Gifts"],
-        href: '#',
+        href: './Products',
       },
       {
         Subid:count++,
       label: 'Shop By Location',
       subLabel: ["Cremation Flowers",'Funeral Flowers Service',"Sympathy for Home & Office","For Cremation Service"],
-      href: '#',
+      href: './Products',
     },
     ],
   },

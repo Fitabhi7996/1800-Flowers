@@ -29,16 +29,6 @@
     overflow: hidden;
 }
 
-/* .zoomwrapper img{
-    width: 100%;
-    height:250px;
-    transition-duration: 0.5s all ease-in-out;
-}
-
-.zoomwrapper:hover img{
-
-    transform: scale(1.05);
-} */
 .zoomProduct{
     overflow: hidden;
     margin: 0 auto;
@@ -139,5 +129,5 @@
     transition: 0.5s all ease-in-out;
 }
 .zoomInsta:hover img{
-    transform: scale(1.2);
+    transform: scale(1.3);
 }

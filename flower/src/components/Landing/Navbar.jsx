@@ -5,9 +5,24 @@ import signIn from "./images/sign-in.svg"
 import truck from "./images/truck.svg"
 import cartIcon from "./images/cartIcon.svg"
 import Dropdown from "./Dropdown"
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Navbar = () => {
+
+  const nav = useNavigate()
+  const nav1 = useNavigate()
+  const handleLogin = ()=>{
+    nav("/login")
+  }
+
+  const handleHome = ()=>{
+    nav1("/")
+  }
+  const handlecart = ()=>{
+    nav("/cart")
+  }
   return (
     <div style={{ marginBottom: "15px" }}>
       <div className={style.first} >
@@ -58,15 +73,16 @@ const Navbar = () => {
         </div>
       </div>
       {/* // ===================================logo & search bar from here======================> */}
-      <div className={style.second}>
-        <div className={style.logo}>
+      <div className={style.second} >    
+      {/* onClick = {handleHome} */}
+        <div className={style.logo} onClick = {handleHome}>
           <img src={logo} alt="logo" />
         </div>
         <div className={style.search}>
           <input placeholder='Enter Keyword or Product Number' />
           <button>SEARCH</button>
         </div>
-        <div className={style.signIn}>
+        <div className={style.signIn} onClick = {handleLogin}>
           <div>
             <img src={signIn} alt="signIn" />
           </div>
@@ -76,7 +92,7 @@ const Navbar = () => {
           <img src={truck} alt="myOrder" />
           <p>My Orders</p>
         </div>
-        <div className={style.cart}>
+        <div className={style.cart} onClick = {handlecart}>
           <img src={cartIcon} alt="myOrder" />
           <p>(0) Cart</p>
         </div>
