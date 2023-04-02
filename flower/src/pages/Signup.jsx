@@ -1,5 +1,5 @@
 import React from "react";
-import "..//pages/Signup.css";
+import "../pages/Signup.css";
 import img from "../Image/Colorful Illustration Florist Logo.png";
 const Signup = () => {
   const [loginUser, setLoginUser] = React.useState({
@@ -10,7 +10,7 @@ const Signup = () => {
   const verfiyform = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`https://642829d7161067a83b08563b.mockapi.io/users`, {
+      await fetch(`https://flowers18.onrender.com/users`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(loginUser),
@@ -31,8 +31,9 @@ const Signup = () => {
         </h2>
       </div>
       <div className="left">
-        <h1>Create Account</h1>
+        
         <form onSubmit={verfiyform} className="signupform">
+
           <input
             onChange={(e) =>
               setLoginUser({ ...loginUser, name: e.target.value })

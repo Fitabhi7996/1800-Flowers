@@ -10,13 +10,13 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .addForm> label {
+  .addForm label {
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
   }
   
-  .addForm> input {
+  .ainput {
     margin-bottom: 5px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -28,11 +28,11 @@
     transition: border-color 0.2s ease-in-out;
   }
   
-  .addForm>input:focus {
+  .addForm input:focus {
     border-color: #008CBA;
   }
   
-  .addForm> button[type="submit"] {
+  .addForm  button[type="submit"] {
     background-color: #008CBA;
     color: #fff;
     border: none;
@@ -43,11 +43,11 @@
     transition: background-color 0.2s ease-in-out;
   }
   
-  .addForm>button[type="submit"]:hover {
+  .addForm button[type="submit"]:hover {
     background-color: #006080;
   }
   
-  .addForm> form > * {
+  .addForm form > * {
     margin: 10px 0;
   }
   

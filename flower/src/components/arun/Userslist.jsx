@@ -9,14 +9,14 @@ const Userslist = () => {
   }, []);
   const fetchUsers = async () => {
     const res = await axios.get(
-      "https://642829d7161067a83b08563b.mockapi.io/users"
+      "https://flowers18.onrender.com/users"
     );
     setUsers(res.data);
     console.log(res.data);
   };
   const handleDeleteUser = async (id) => {
     const res = await axios.delete(
-      `https://642829d7161067a83b08563b.mockapi.io/users/${id}`
+      `https://flowers18.onrender.com/users/${id}`
     );
     fetchUsers();
   };

@@ -9,10 +9,9 @@ export function AddProductForm() {
   const [image1, setImage1] = useState("");
   const [category, setCategory] = useState("");
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleAddProduct({ title, price, price1,category, image, image1 });
+    handleAddProduct({ title, price, price1, category, image, image1 });
     setTitle("");
     setPrice("");
     setPrice1("");
@@ -22,65 +21,60 @@ export function AddProductForm() {
   };
   const handleAddProduct = async (newProduct) => {
     const res = await axios.post(
-      `https://wild-blue-lemur-sari.cyclic.app/flowers`,
+      `https://flowers18.onrender.com/flowers`,
       newProduct
     );
     alert("Product added successfully");
   };
   return (
     <form onSubmit={handleSubmit} className="addForm">
-      <label>
-        Name:
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </label>
+      <label>Name:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
       <br />
-      <label>
-       Category:
-        <input
-          type="text"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-      </label>
+      <label>Category:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      />
       <br />
-      <label>
-        Price:
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => setPrice(+e.target.value)}
-        />
-      </label>
+      <label>Price:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={price}
+        onChange={(e) => setPrice(+e.target.value)}
+      />
       <br />
-      <label>
-        Offer Price:
-        <input
-          type="text"
-          value={price1}
-          onChange={(e) => setPrice1(+e.target.value)}
-        />
-      </label>
-      <label>
-        Image 1:
-        <input
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-      </label>
+      <label>Offer Price:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={price1}
+        onChange={(e) => setPrice1(+e.target.value)}
+      />
       <br />
-      <label>
-        Image 2:
-        <input
-          type="text"
-          value={image1}
-          onChange={(e) => setImage1(e.target.value)}
-        />
-      </label>
+      <label>Image 1:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+      />
+      <br />
+      <label>Image 2:</label>
+      <input
+        className="ainput"
+        type="text"
+        value={image1}
+        onChange={(e) => setImage1(e.target.value)}
+      />
       <br />
       <button type="submit">Add Product</button>
     </form>
