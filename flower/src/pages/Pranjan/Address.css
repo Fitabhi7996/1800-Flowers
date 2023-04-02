@@ -1,0 +1,142 @@
+.main3{
+    /* border: 2px solid orangered; */
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.left3{
+    /* border: 2px solid yellowgreen; */
+    width: 55%;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    
+}
+.card2{
+    /* border: 2px solid violet; */
+    width: 105%;
+    
+}
+
+.right3{
+    /* border: 2px solid cyan; */
+    width: 45%;
+}
+
+.address2{
+    /* border: 2px solid orange; */
+    width:65%;
+    text-align: left;
+    padding-right: 20px;
+}
+.info2{
+    /* border: 2px solid blue; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* height: 1000px; */
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 14px;
+    margin-right: 100px;
+}
+.cartcard1{
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+border-bottom: 1px solid #696969;
+   padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    padding-top: 8px;
+  
+    /* border-radius: 12px; */
+}
+.qty{
+    /* border: 2px solid pink; */
+    color: #696969;
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.duplicate{
+    /* border: 2px solid indigo; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 25px;
+}
+.double{
+    display: flex;
+    /* border: 2px solid green; */
+    justify-content: space-between;
+  
+}
+
+.double > input{
+    width: 45%;
+    height: 30px;
+    font-size: 17px;
+ align-items: baseline;
+border-radius: 5px;
+ border: 1px solid #696969 ; 
+}
+.res1{
+    width: 100%;
+    height: 40px;
+    margin-top: 18px;
+    font-size: 17px;
+    border: 1px solid #696969 ;
+    border-radius: 5px;
+    border: 1px solid #696969 ;
+   }
+
+.ad12{
+    width: 100%;
+    height: 30px;
+    font-size: 17px;
+ align-items: baseline;
+ margin-top: 18px;
+ margin-bottom: 15px;
+ border-radius: 5px;
+ border: 1px solid #696969 ;
+}
+.trio{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tigada{
+    width: 30%;
+    height: 30px;
+    font-size: 17px;
+ align-items: baseline;
+}
+.check3{
+    display: flex;
+    justify-content: left;
+    width: 55%;
+    gap:12px;
+    /* border: 2px solid cyan; */
+    align-items: center;
+    height: 25px;
+}
+.check3>input{
+   
+    width:19px ;
+   border-radius: 7px;
+}
+.gopro1{
+    width: 100%;
+    height: 38px;
+    font-size: 16px;
+    color: white;
+    background-color: #00C876;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-top: 25px;
+}
