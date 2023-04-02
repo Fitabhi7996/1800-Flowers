@@ -5,6 +5,7 @@
     margin: auto;
     display: flex;
     margin-top: 15px;
+        margin-bottom: 25px;
 }
 .imgages{
     /* border: 2px solid pink; */
@@ -145,6 +146,7 @@ accent-color: blue;
     justify-content: center;
     margin-left: 15px;
     margin-right: 15px;
+
    
 }
 .left{
@@ -153,12 +155,13 @@ accent-color: blue;
     justify-content: center;
     align-items: last baseline;
     border-right: 1px solid black;
+    /* height: 25px; */
 }
 .right{
     width: 50%;
     /* border: 2px solid black; */
     padding-left: 30px;
-    
+    /* height: 25px; */
 }
 .type1{
     font-size: 20px;
@@ -186,4 +189,3 @@ accent-color: blue;
     margin-left: 15px;
     margin-right: 15px;
 }
-

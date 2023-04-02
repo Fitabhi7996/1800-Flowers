@@ -1,5 +1,6 @@
 import "./Address.css";
 import { CheckCircleIcon, TriangleDownIcon, DeleteIcon } from '@chakra-ui/icons';
+import { Link } from "react-router-dom";
 const item={
     "id": 1,
     "title": "Hoppy Easter™",
@@ -52,6 +53,11 @@ const initdata=[
       }]
 
 function Address(){
+
+
+    function check(){
+        console.log("click")
+    }
 
     return(
         <div className="main3">
@@ -155,7 +161,7 @@ function Address(){
   <option value={4}> Wedding</option>
   <option value={5}> Thank You</option>
 </select>
-<button className="gopro1"> <b> SAVE ADDRESS TO CONTINUE</b></button>
+<Link to="/payment" ><button className="gopro1"onClick={check} > <b> SAVE ADDRESS TO CONTINUE</b></button></Link>
 
                 </div>
                 <div className="card2">

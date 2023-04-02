@@ -1,48 +1,27 @@
 import "./Cartpage.css";
 import { CheckCircleIcon, TriangleDownIcon, DeleteIcon } from '@chakra-ui/icons';
 import { Select } from '@chakra-ui/react';
-const initdata=[
-    {
-      "id": 1,
-      "title": "Hoppy Easter™",
-      "price": 59.99,
-      "price1": 79.99,
-      "category": "Easter",
-      "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192269x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}",
-      "image1": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}",
-      "createdAt": 1680002359958
-    },
-    {
-      "id": 2,
-      "title": "Easter Tulip Bouquet",
-      "price": 54.99,
-      "price1": 97.99,
-      "category": "Easter",
-      "image": "https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/147130mprsv1ws6ck19x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}",
-      "image1": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/147130mprsv1ws6ck19x.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}",
-      "createdAt": 1680002536825
-    },
-    {
-      "id": 3,
-      "title": "Easter Egg-Stravaganza™",
-      "price": 59.99,
-      "price1": 79.99,
-      "category": "Easter",
-      "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191304lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}",
-      "image1": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191304lx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}",
-      "createdAt": 1680002859472
-    },{
-        "id": 4,
-        "title": "Easter Egg-Stravaganza™",
-        "price": 59.99,
-        "price1": 79.99,
-        "category": "Easter",
-        "image": "https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191304lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}",
-        "image1": "https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191304lx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}",
-        "createdAt": 1680002859472
-      }]
+import {useState,useEffect} from "react"
+import { Link } from "react-router-dom";
+
+
+
 
 function Cartpage(){
+const [data,setData]=useState([]);
+
+    const getData = () => {
+        fetch(`https://flowers18.onrender.com/carts`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setData(data);
+          });
+      };
+
+useEffect(()=>{
+getData()
+},[])
 
     return(
         <div className="cart1">
@@ -50,10 +29,10 @@ function Cartpage(){
             <div className="card1">
             <h1>Shopping Cart</h1>
             {
-            initdata.map((item,index)=>{
+            data.map((item,index)=>{
                 return(
                     <div className="cartcard" key={item.id}>
-                        <p style={{height:"20px",margin:"0px"}}> <b> Item {index+1} of {initdata.length}</b></p>
+                        <p style={{height:"20px",margin:"0px"}}> <b> Item {index+1} of {data.length}</b></p>
                         <hr style={{color:"#696969"}} />
                         <div className="content">
                         <div className="Photu">
@@ -100,7 +79,7 @@ function Cartpage(){
             }
             <div className="checkout1">
                 <p style={{height:"14px"}}> <b>Cart Items: <span style={{color:"indigo"}}>3 Items</span></b>  </p>
-                <button className="gopro"> <b> PROCEED TO CHECKOUT</b></button>
+               <Link to="/address" ><button className="gopro"> <b> PROCEED TO CHECKOUT</b></button></Link> 
             </div>
             </div>
             
@@ -108,7 +87,7 @@ function Cartpage(){
 
             <div className="paytm">
                 <div className="gpay">
-                <button className="gopro"> <b> PROCEED TO CHECKOUT</b></button>
+                <Link to="/address" > <button className="gopro"> <b> PROCEED TO CHECKOUT</b></button></Link>
                 <div className="summary">
                 <p><b>Order Summary</b></p>
                 <div className="payment1">

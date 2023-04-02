@@ -1,0 +1,119 @@
+.info3{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* height: 1000px; */
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 14px;
+    margin-right: 100px;
+}
+
+
+.method{
+    /* border: 2px solid brown; */
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+.method>div{
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+   height: 45px;
+   justify-content: center;
+   align-items: center;
+   width:125px ;
+   border-radius: 8px;
+    
+}
+.forcard{
+    /* border: 2px solid green; */
+}
+.cred{
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+.cred>div{
+    /* border: 2px solid gray; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+.ad13{
+    width: 100%;
+    height: 30px;
+    font-size: 17px;
+ align-items: baseline;
+ margin-top: 18px;
+ /* margin-bottom: 15px; */
+ border-radius: 5px;
+ border: 1px solid #696969 ;
+}
+.trio2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15PX;
+}
+.tigada{
+    width: 30%;
+    height: 30px;
+    font-size: 17px;
+ align-items: baseline;
+ border-radius: 5px;
+ border: 1px solid gray;
+}
+.check4{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    gap:12px;
+    /* border: 2px solid cyan; */
+    align-items: center;
+    height: 40px;
+}
+.check4>input{
+   
+    height:20px ;
+    width: 20PX;
+   border-radius: 7px;
+}
+.opt23{
+    border: none;
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    margin-top: 25px;
+    background-color: #F4F4F4;
+}
+.check5{
+    display: flex;
+    justify-content: left;
+    width: 70%;
+    gap:12px;
+    /* border: 2px solid cyan; */
+    align-items: center;
+    height: 40px;
+}
+.check5>input{
+   
+    height:20px ;
+    width: 20PX;
+   border-radius: 7px;
+}
+.gpay2{
+    /* border: 2px solid #00C876 ; */
+    /* position: fixed;
+        z-index: 5000; */
+    width: 60%;
+    height: 500px;
+    text-align: left;
+    margin-top: 40px;
+    padding-left: 15px;
+}
