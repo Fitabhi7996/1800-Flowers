@@ -6,7 +6,7 @@ import {
     FaThList
 }
 from "react-icons/fa";
-import logo from "../../images/Colorful Illustration Florist Logo.png";
+import logo from "../Landing/images/logo.png";
 import { NavLink } from 'react-router-dom';
 
 

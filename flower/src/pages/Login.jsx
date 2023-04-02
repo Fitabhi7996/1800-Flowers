@@ -1,7 +1,7 @@
 import React from "react";
 import "..//pages/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import img from "../Image/Colorful Illustration Florist Logo.png.png";
+import img from "../Image/Colorful Illustration Florist Logo.png";
 const Login = () => {
   const navigate = useNavigate();
   const [loginUser, setLoginUser] = React.useState({

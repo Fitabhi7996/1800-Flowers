@@ -1,6 +1,6 @@
 import React from "react";
 import "..//pages/Signup.css";
-import img from "../images/Colorful Illustration Florist Logo.png";
+import img from "../Image/Colorful Illustration Florist Logo.png";
 const Signup = () => {
   const [loginUser, setLoginUser] = React.useState({
     email: "",
