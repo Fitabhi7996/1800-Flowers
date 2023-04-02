@@ -1,11 +1,11 @@
-/* Center the form horizontally and vertically */
-.login-container {
+.signup-container {
   background-image: url("../images/18F_large.jpg");
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   background-size: cover;
   height: 90vh;
+
 }
 .right {
   height: 80vh;
@@ -28,8 +28,10 @@
   margin: 15px;
   border-radius: 5px;
 }
+
+
 /* Style the form itself */
-.signinform {
+.signupform {
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +46,7 @@ label {
   margin-top: 10px;
 }
 
-input {
+.input {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -96,29 +98,38 @@ input {
 .google:hover {
   background-color: #c23321;
 }
-.social {
+.social{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around
 }
-.right img {
+.right img{
   width: 40%;
-  align-self: center;
+ align-self: center;
 }
-@media only screen and (max-width: 768px) {
-  .login-container {
-    height: auto;
-    padding: 50px;
-  }
+#check{
+  box-shadow: none;
+  display: inline;
+  border: 1px solid red;
 
+}
+.label{
+  margin-top: 0%;
+  font-size: smaller;
+  font-family: sans-serif;
+}
+p{
+  font-size: smaller;
+  font-family: sans-serif;
+  margin: 2px;
+}
+
+/* Media queries for small screens */
+@media only screen and (max-width: 600px) {
   .right,
   .left {
     width: 100%;
+    margin: 5px;
     height: auto;
-    margin: 15px 0;
-  }
-
-  .right {
-    padding: 5%;
   }
 
   .right img {
@@ -126,16 +137,15 @@ input {
   }
 }
 
-@media only screen and (max-width: 576px) {
+/* Media queries for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .right,
+  .left {
+    width: 45%;
+    margin: 10px;
+  }
+
   .right img {
-    width: 80%;
-  }
-
-  input {
-    font-size: 14px;
-  }
-
-  .submit {
-    font-size: 14px;
+    width: 50%;
   }
 }
