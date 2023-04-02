@@ -25,7 +25,7 @@ const Products = () => {
 
 
   const getData = () => {
-    fetch(`https://wild-blue-lemur-sari.cyclic.app/flowers?category=${cat}`)
+    fetch(`https://flowers18.onrender.com/flowers?category=${cat}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -190,7 +190,7 @@ const Products = () => {
                   style={{
                     height: "45px",
                     width: "221px",
-                    marginLeft: "120px",
+                    marginLeft: "40px",
                     marginTop: "10px",
                     textAlign: "center",
                   }}
@@ -206,8 +206,8 @@ const Products = () => {
                 textAlign: "left",
                 paddingTop: "20px",
                 border: "3px solid #636363",
-                fontSize: "25px",
-                height: "360px",
+                fontSize: "20px",
+                height: "300px",
                 width: "90%",
                 marginTop: "10px",
                 cursor: "pointer",
@@ -281,10 +281,10 @@ const Products = () => {
               style={{
                 border: "3px solid  #636363",
                 marginLeft: "12px",
-                height: "550px",
+                height: "500px",
                 width: "90%",
                 marginTop: "20px",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
             >
               <div
@@ -339,10 +339,10 @@ const Products = () => {
               style={{
                 border: "3px solid  #636363",
                 marginLeft: "12px",
-                height: "550px",
+                height: "500px",
                 width: "90%",
                 marginTop: "20px",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
             >
               <div
@@ -417,8 +417,8 @@ const Products = () => {
         </div>
       </div>
       <br />
-      <br />
-      <br />
+      <br/>
+      
       <br />
       <hr />
       

@@ -5,7 +5,7 @@ import Products  from '../pages/Products';
 import Productdetails from "../pages/Productdetails"
 // import Signup from "../pages/Signup"
 // import Login from "../pages/Login"
-// import Cartpage from "../pages/Cartpage"
+import Cartpage from "../pages/Cartpage"
 // import Payment from "../pages/Payment"
 // import Address from "../pages/Address"
 // import AdminDasboard from "../pages/AdminDasboard"
@@ -19,9 +19,10 @@ const AllRoutes = () => {
       <Route path="/" element={<Home />}></Route>
       <Route path="/products" element={<Products />}></Route>
       <Route path="/productDetails/:id" element={<Productdetails/>}></Route>
+      <Route path="/cartpage" element={<Cartpage />}></Route> 
       {/* <Route path="/login" element={<Login />}></Route>
       <Route path="/signup" element={<Signup />}></Route>
-      <Route path="/cartpage" element={<Cartpage />}></Route> */}
+      
       {/* <Route path="/payment" element={<Payment />}></Route>
       <Route path="/address" element={<Address />}></Route>
       <Route path="/admindasboard" element={<AdminDasboard />}></Route> */}
