@@ -1,0 +1,75 @@
+.editForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editForm > label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.editForm > input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.editForm > input:focus {
+  border-color: #008CBA;
+}
+
+.editForm > button[type="submit"] {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.editForm > button[type="submit"]:hover {
+  background-color: #006080;
+}
+
+.editForm > form > * {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 320px) {
+  .editForm {
+    max-width: 280px;
+    padding: 10px;
+  }
+
+  .editForm > input {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .editForm {
+    max-width: 600px;
+    padding: 15px;
+  }
+
+  .editForm > input {
+    font-size: 16px;
+  }
+}
+

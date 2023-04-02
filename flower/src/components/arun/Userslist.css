@@ -1,0 +1,42 @@
+.users {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid #ccc;
+  }
+  
+  .users h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .users table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .users th, td {
+    text-align: left;
+    padding: 0.5rem;
+  }
+  
+  .users th {
+    background-color: #eee;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .users button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .users button:hover {
+    background-color: #0069d9;
+  }
+  

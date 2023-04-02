@@ -1,7 +1,9 @@
 import React from "react";
 import "..//pages/Login.css";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../images/Colorful Illustration Florist Logo.png";
 const Login = () => {
+  const navigate = useNavigate();
   const [loginUser, setLoginUser] = React.useState({
     email: "",
     password: "",
@@ -10,20 +12,33 @@ const Login = () => {
   const verifyLogin = async (e) => {
     e.preventDefault();
     try {
-      let usersData = await fetch(`https://api-ak.vercel.app/users`);
+      let usersData = await fetch(
+        `https://642829d7161067a83b08563b.mockapi.io/users`
+      );
       let data = await usersData.json();
       for (let i = 0; i <= data.length - 1; i++) {
         if (
+          loginUser.email === "admin@gmail.com" &&
+          loginUser.password === "admin"
+        ) {
+          navigate("/admin");
+          alert(`Welcome Back Admin`);
+          return;
+          
+        } else if (
           loginUser.email === data[i].email &&
           loginUser.password === data[i].password
         ) {
+          localStorage.setItem("User", data[i].name);
           alert(`Welcome Back ${data[i].name}`);
+          navigate("/checkout");
           return;
         }
       }
-      alert("Login Error");
+      
     } catch (error) {
       console.log("error ", error);
+      alert("Login Error");
     }
   };
   return (
@@ -31,14 +46,20 @@ const Login = () => {
       <div className="right">
         <img src={img} alt="" />
         <h3>Welcome Back!</h3>
-        <h2>CELEBRATIONS <br/>
-          FAMILY OF BRANDS</h2>
+        <h2>
+          CELEBRATIONS <br />
+          FAMILY OF BRANDS
+        </h2>
       </div>
       <div className="left">
-        {" "}
-        <form onSubmit={verifyLogin} className="form">
+        <form onSubmit={verifyLogin} className="signinform">
           <h3>Sign In</h3>
-          <p>Not registered? Create Account</p>
+          <p>
+            Not registered?
+            <Link to={`/login/signup`}>
+              Create Account
+            </Link>
+          </p>
           <label htmlFor="">E-mail</label>
           <input
             onChange={(e) =>
