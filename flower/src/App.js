@@ -1,20 +1,20 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 import './App.css';
-import Footer from './Components/Landing Page/Footer';
-import Home from './Components/Landing Page/Home';
-import Navbar from './Components/Landing Page/Navbar';
-import BirthdayCake from './pages/product';
+import Footer from "./components/Landing/Footer"
+import Home from './components/Landing/Home';
+import Navbar from './components/Landing/Navbar';
+
 
 function App() {
   return (
 
     <div className="App">
       <ChakraProvider>
-      {<Navbar />}
+      <Navbar />
       <Home/>
-      {/* <BirthdayCake /> */}
-        <Footer />
+      
+        <Footer/>
       </ChakraProvider>
       
     </div>
