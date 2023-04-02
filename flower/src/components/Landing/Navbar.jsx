@@ -13,16 +13,17 @@ const Navbar = () => {
 
   const nav = useNavigate()
   const nav1 = useNavigate()
-  const handleLogin = ()=>{
+  const handleLogin = () => {
     nav("/login")
   }
 
-  const handleHome = ()=>{
+  const handleHome = () => {
     nav1("/")
   }
-  const handlecart = ()=>{
+  const handlecart = () => {
     nav("/cart")
   }
+
   return (
     <div style={{ marginBottom: "15px" }}>
       <div className={style.first} >
@@ -73,34 +74,51 @@ const Navbar = () => {
         </div>
       </div>
       {/* // ===================================logo & search bar from here======================> */}
-      <div className={style.second} >    
-      {/* onClick = {handleHome} */}
-        <div className={style.logo} onClick = {handleHome}>
+      <div className={style.second} >
+        {/* onClick = {handleHome} */}
+        <div className={style.logo} onClick={handleHome}>
           <img src={logo} alt="logo" />
         </div>
         <div className={style.search}>
           <input placeholder='Enter Keyword or Product Number' />
           <button>SEARCH</button>
         </div>
-        <div className={style.signIn} onClick = {handleLogin}>
+
+
+
+        <div className={style.signIn} onClick={handleLogin}>
           <div>
             <img src={signIn} alt="signIn" />
           </div>
-          <p>Sign In</p>
+          <div>
+
+            <p>Sign In</p>
+          </div>
         </div>
         <div className={style.myOrder}>
-          <img src={truck} alt="myOrder" />
-          <p>My Orders</p>
+
+          <div>
+            <img src={truck} alt="myOrder" />
+          </div>
+          <div>
+            <p>My Orders</p>
+          </div>
         </div>
-        <div className={style.cart} onClick = {handlecart}>
-          <img src={cartIcon} alt="myOrder" />
-          <p>(0) Cart</p>
+        <div className={style.cart} onClick={handlecart}>
+          <div>
+            <img src={cartIcon} alt="myOrder" />
+          </div>
+          <div>
+            <p>(0) Cart</p>
+          </div>
         </div>
       </div>
 
+
+
       {/* ====================================DropDown=============================================== */}
       <div className={style.dropdown}>
-        <Dropdown/>
+        <Dropdown />
       </div>
     </div>
 

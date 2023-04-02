@@ -64,11 +64,14 @@
 .search input{
     width:70%;
     padding-left: 10px;
-    height:39px;
+    height:40px;
     color:gray;
     font-size: 15px;
     border:1px solid #e8eaec;
     outline: none;
+    margin-top: 19px;
+    border-radius: 0;
+    box-shadow: none;
 }
 .search button{
     width:16%;
@@ -78,30 +81,57 @@
     font-size: 12px;
     font-weight: 600;
     border: #65388b;
+    border-radius: 0;
 }
+
+
+
 .signIn{
     width:6%;
+    margin-top: 5px;
     margin-left: 152px;
+    cursor: pointer;
+
+}
+.signIn > div:nth-child(1){
+    margin-top: 2px;
+}
+.signIn > div:nth-child(2){
+    padding-bottom: 2px;
+    /* border: 1px solid chocolate; */
 }
 .signIn p{
     font-size: 12px;
     color:#000;
     text-align: center;
+    font-family: LatoMedium,sans-serif
+
 }
 .signIn img{
     display: inline-block;
+    /* border: 1px solid black; */
     text-align: center;
     width: auto;
-    max-height: 25px;
-    margin-bottom: 2px;
-    padding-top: 7px;
+    max-height: 26px;
+    /* margin-bottom: 2px; */
+    /* padding-top: 7px; */
+}
+.myOrder > div:nth-child(1){
+    margin-top: 2px;
+}
+.myOrder > div:nth-child(2){
+    padding-bottom: 2px;
+    /* border: 1px solid chocolate; */
 }
 .myOrder{
     width:6%;
-
+    margin-top: 5px;
+    cursor: pointer;
     /* margin-left: 15px;
     margin-right: 15px; */
+
 }
+
 .myOrder p{
     font-size: 12px;
     color:#000;
@@ -111,13 +141,23 @@
     display: inline-block;
     text-align: center;
     width: auto;
-    max-height: 25px;
+    max-height: 26px;
     margin-bottom: 2px;
-    padding-top: 7px;
+    /* padding-top: 7px; */
 }
 .cart{
     width:6%;
+    margin-top: 5px;
+    cursor: pointer;
 
+}
+
+.cart > div:nth-child(1){
+    margin-top: 2px;
+}
+.cart > div:nth-child(2){
+    padding-bottom: 2px;
+    /* border: 1px solid chocolate; */
 }
 .cart p{
     font-size: 12px;
@@ -129,9 +169,9 @@
     display: inline-block;
     text-align: center;
     width: auto;
-    max-height: 25px;
+    max-height: 26px;
     margin-bottom: 2px;
-    padding-top: 7px;
+    /* padding-top: 7px; */
 }
 
 
