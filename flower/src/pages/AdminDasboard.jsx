@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./Admindashboard.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "../components/arun/Sidebar";
+import Adminroutes from "../components/arun/Adminroutes";
 
-const AdminDasboard = () => {
+const Admindashboard = () => {
   return (
-    <div>AdminDasboard</div>
-  )
-}
+    <>
+      <Sidebar>
+        <Adminroutes />
+      </Sidebar>
+    </>
+  );
+};
 
-export default AdminDasboard
+export default Admindashboard;
