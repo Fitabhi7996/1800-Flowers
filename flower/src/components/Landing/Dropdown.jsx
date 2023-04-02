@@ -84,9 +84,10 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'} >
             <PopoverTrigger >
               <Link
-               
+                // to = {navItem.path}
+                href={navItem.path}
                 p={2}
-                href={navItem.href ?? '#'}
+                // href={navItem.href ?? '#'}
                 fontSize="min(1.2vw, 0.95rem)"
                 fontWeight={600}
                 color={"rgb(47, 47, 47)"}
@@ -145,8 +146,8 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Link
-      
       href={href}
+      // to={href}
       role={'group'}
       display={'block'}
       p={2}
@@ -249,6 +250,7 @@ const MobileNavItem = ({ label, children, href }) => {
   
   const NAV_ITEMS= [
     {
+      path:"/products",
         MainId:count++,
       label: 'EASTER',
       imageData:[{image:"https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7017cc3e8e70fb48/640b1ab4df61e31094ff5053/personalized-easter-gifts-fy23-global-nav-banner-580x400.jpg?quality=70&auto=webp&optimize={medium}",text:"Personalised Easter Gifts >"}
@@ -260,18 +262,19 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Easter',
           subLabel: ['Trending Design to inspire you',"Centerpieces","Flowers","Flower & Berries","Gift For Kids","Lilies","Plants","Spring Bulb Event:Free Gift"],
-          href: './Products',
+          href: '/products',
         },
         {
             Subid:count++,
           label: 'Shop by Gourmet Food & Treats',
           subLabel: ['Baked Goods','Chocolate Covered Strawberries',"Easter Gift Basket & Chocolates","Fruit Bouquets","Prepared Meals","Wine Gift"],
-          href: './Products',
+          href: '/products',
         },
       ],
 
     },
     {
+      path:"/products",
         MainId:count++,
       label: 'SPRING',
       imageData:[{image:"https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt01ccf38be516c0db/63f916052dbe1f10bbd00a78/spring-bulbs-event-fy23-global-nav-banner-580x400.jpg?quality=70&auto=webp&optimize={medium}",text:"Free Gift With Purchase >"}
@@ -283,17 +286,18 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Spring',
           subLabel: ['All Spring Flower & Gift',"Spring Bulb Event:Free Gift","Flowering Plants","Gardening Décor","Peonies","Tulips","Wreaths"],
-          href: './Products',
+          href: '/products',
         },
         {
           Subid:count++,
         label: 'Seasonal Occasion',
         subLabel: ["Women's History Month",'Ramadan (3/12 - 4/21)',"Passover (4/5 - 4/13)","Easter (4/9)","National Sibling Day (4/10)"],
-        href: './Products',
+        href: '/products',
       },
       ],
     },
     {
+      path:"/products",
         MainId:count++,
       label: 'BIRTHDAY',
       imageData:[{image:"https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltf17b34ccacec190d/624524c196ee250ebe231f72/birthday-flower-subscriptions-global-nav-banner-280x280.jpg?quality=70&auto=webp&optimize={medium}",text:"Birthday Flower Subscription >"}],
@@ -302,14 +306,14 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Birthday',
           subLabel: ['All Birthday Gifts',"Birthday Best Seller","Birthday Gift Guide","Flower Subscription","Party Supllies","Plants"],
-          href: './Products',
+          href: '/products',
         },
         
         {
           Subid:count++,
         label: 'Gift & More',
         subLabel: ["All Keep Safe Gift",'Gift Sets',"Jwelery","Teddy Bears & More","Tribute | Free Group Video"],
-        href: './Products',
+        href: '/products',
       },
       {
           Subid:count++,
