@@ -3,8 +3,15 @@ import { Radio, RadioGroup } from '@chakra-ui/react';
 import { Select } from '@chakra-ui/react';
 import { PhoneIcon, AddIcon, CalendarIcon } from '@chakra-ui/icons'
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 function Productdetail(){
 const [shift,setShift]=useState("false");
+const [data,setData]=useState({})
+
+const {id}=useParams();
+console.log(id);  
+   
+   
 
 
 function Changeimage(e){
@@ -15,9 +22,20 @@ setShift(e.target.value);
 
 }
 
-// useEffect(()=>{
-     
-// },[shift]);
+const getData = (id) => {
+    fetch(`https://wild-blue-lemur-sari.cyclic.app/flowers/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
+  };
+
+
+useEffect(()=>{
+    
+     getData(id);
+},[id]);
 
 
 
@@ -25,8 +43,8 @@ setShift(e.target.value);
         <div className="product">
             <div className="imgages">
                 <div>
-                    <img src="https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192269x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" alt="flower" width="90%" />
-                    <img src="https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}" alt="flow" width="90%" />
+                    <img src={data.image} alt="flower" width="45%" />
+                    <img src={data.image1} alt="flow" width="45%" />
                 </div>
             </div>
             <div className="photo">

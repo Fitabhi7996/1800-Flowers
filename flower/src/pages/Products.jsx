@@ -15,7 +15,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import ProductCard from "../components/ProductCard";
 
-export const Products = () => {
+const Products = () => {
   const [cat, setCat] = React.useState("Easter");
   const [data, setData] = useState([]);
   const [count,setCount]=useState(0);
@@ -427,3 +427,5 @@ export const Products = () => {
    
   );
 };
+
+export default Products
