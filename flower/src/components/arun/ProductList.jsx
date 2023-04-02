@@ -13,7 +13,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     const res = await axios
-      .get("https://wild-blue-lemur-sari.cyclic.app/flowers")
+      .get("https://flowers18.onrender.com/flowers")
       .then(
         (res) =>
         setProducts(
@@ -27,7 +27,7 @@ const ProductList = () => {
 
   const handleDeleteProduct = async (id) => {
     const res = await axios.delete(
-      `https://wild-blue-lemur-sari.cyclic.app/flowers/${id}`
+      `https://flowers18.onrender.com/flowers/${id}`
     );
     fetchProducts();
   };
@@ -39,6 +39,7 @@ const ProductList = () => {
       <h1>Product List</h1>
       <div className="productssection">
         <input
+        className="search"
           type="text"
           placeholder="Search for products"
           value={searchTerm}
@@ -69,7 +70,7 @@ const ProductList = () => {
                 <td>{product.title}</td>
                 <td>${product.price}</td>
                 <td>
-                  <button onClick={() => handleDeleteProduct(product.id)} className="delete">
+                  <button onClick={() => handleDeleteProduct(product.id)} className="delete" >
                     Delete
                   </button>
                   <button >

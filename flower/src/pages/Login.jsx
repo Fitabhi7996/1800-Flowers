@@ -1,5 +1,5 @@
 import React from "react";
-import "..//pages/Login.css";
+import "../pages/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../Image/Colorful Illustration Florist Logo.png";
 const Login = () => {
@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     try {
       let usersData = await fetch(
-        `https://642829d7161067a83b08563b.mockapi.io/users`
+        `https://flowers18.onrender.com/users`
       );
       let data = await usersData.json();
       for (let i = 0; i <= data.length - 1; i++) {
@@ -31,7 +31,7 @@ const Login = () => {
         ) {
           localStorage.setItem("User", data[i].name);
           alert(`Welcome Back ${data[i].name}`);
-          navigate("/checkout");
+          navigate("/cart");
           return;
         }
       }
