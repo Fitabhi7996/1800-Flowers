@@ -25,7 +25,7 @@ export const Products = () => {
 
 
   const getData = () => {
-    fetch(`https://wild-blue-lemur-sari.cyclic.app/flowers?category=${cat}`)
+    fetch(`https://flowers18.onrender.com/flowers?category=${cat}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
