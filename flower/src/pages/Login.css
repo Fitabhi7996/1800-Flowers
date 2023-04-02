@@ -1,6 +1,6 @@
 /* Center the form horizontally and vertically */
 .login-container {
-  background-image: url("../images/18F_large.jpg");
+  background-image: url("../Image/18F_large.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
