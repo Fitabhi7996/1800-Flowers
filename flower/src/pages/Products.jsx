@@ -117,7 +117,7 @@ export const Products = () => {
                 height: "290px",
                 width: "90%",
                 backgroundColor: "#734f96",
-                marginTop: "10px",
+                
                 borderRadius: "8px",
                 paddingLeft: "20px",
                 textAlign: "center",
@@ -190,7 +190,7 @@ export const Products = () => {
                   style={{
                     height: "45px",
                     width: "221px",
-                    marginLeft: "120px",
+                    marginLeft: "35px",
                     marginTop: "10px",
                     textAlign: "center",
                   }}
@@ -206,12 +206,12 @@ export const Products = () => {
                 textAlign: "left",
                 paddingTop: "20px",
                 border: "3px solid #636363",
-                fontSize: "25px",
-                height: "360px",
+                fontSize: "20px",
+                height: "270px",
                 width: "90%",
                 marginTop: "10px",
                 cursor: "pointer",
-                marginLeft:"14px",
+                marginLeft:"10px",
               }}
             >
               <div style={{ marginLeft: "30px" }}>
@@ -281,10 +281,10 @@ export const Products = () => {
               style={{
                 border: "3px solid  #636363",
                 marginLeft: "12px",
-                height: "550px",
+                height: "400px",
                 width: "90%",
                 marginTop: "20px",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
             >
               <div
@@ -339,10 +339,10 @@ export const Products = () => {
               style={{
                 border: "3px solid  #636363",
                 marginLeft: "12px",
-                height: "550px",
+                height: "450px",
                 width: "90%",
                 marginTop: "20px",
-                fontSize: "25px",
+                fontSize: "20px",
               }}
             >
               <div
