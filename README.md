@@ -47,8 +47,19 @@ We made this project within the 4 days
 ## Glimpses of 1800flowers-Clone :
 <table>
   <tr>
-    <td><img src="https://ibb.co/85z64hP"  alt="home" /></td>
+    <td><img src="https://user-images.githubusercontent.com/110329801/229410614-576ebf03-7115-47e6-9866-9adeecee9ce7.png"  alt="home" /></td>
   </tr>
+  <br/>
+  <br/>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/110329801/229411179-3736ea32-adea-4e0a-bc82-d72f054ee258.png"  alt="" /></td>
+  </tr>
+  <br/>
+  <br/>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/110329801/229411490-66ccdde2-fa29-4bae-837b-d2601ad0818c.png"  alt="" /></td>
+  </tr>
+  <br/>
   <br/>
 
 </table>
