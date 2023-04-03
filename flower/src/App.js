@@ -11,7 +11,7 @@ function App() {
       <ChakraProvider>
         <Navbar />
         <AllRoutes />
-        <Footer />
+        {/* <Footer /> */}
       </ChakraProvider>
     </div>
   );

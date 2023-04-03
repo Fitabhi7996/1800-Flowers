@@ -3,7 +3,8 @@ import { CheckCircleIcon, TriangleDownIcon, DeleteIcon } from '@chakra-ui/icons'
 import { Select } from '@chakra-ui/react';
 import {useState,useEffect} from "react"
 import { Link } from "react-router-dom";
-
+import Footer from "../components/Landing/Footer";
+import axios from "axios";
 
 
 
@@ -18,12 +19,23 @@ const [data,setData]=useState([]);
             setData(data);
           });
       };
+      function Deletedata(id){
+        alert("Item removed from cart")
+        axios.delete(`https://flowers18.onrender.com/carts/${id}`).then((data)=>{console.log(data);
+        getData()}).catch((err)=>console.log(err));
+      }
+
+      let sum=0;
+      for(let i=0;i<data.length;i++)
+      {
+        sum=sum+data[i].price;
+      }
 
 useEffect(()=>{
 getData()
 },[])
 
-    return(
+    return(<>
         <div className="cart1">
             <div className="cartdata">
             <div className="card1">
@@ -42,7 +54,7 @@ getData()
                         <div className="det">
                         <div className="title">
                         <p><b>{item.title}</b></p>
-                        <DeleteIcon w={22} h={22} color="#5f3c86"/>
+                        <DeleteIcon w={22} h={22} color="#5f3c86" onClick={()=>{Deletedata(item.id)}}/>
                         </div>
                         <p>Itemclass # : {item.category}</p>
                         <p>Sold by: 1800 Flowers</p>
@@ -64,7 +76,7 @@ getData()
   <option value={12}> 12</option>
 </select>
                         </div>
-                        <p>Subtotal: $467.94</p>
+                        <p>Subtotal: ${item.price}</p>
                         <div className="duplicate">
                             <p><u style={{color:"indigo"}}>Duplicate Items</u></p>
                             <div>
@@ -78,7 +90,7 @@ getData()
             })    
             }
             <div className="checkout1">
-                <p style={{height:"14px"}}> <b>Cart Items: <span style={{color:"indigo"}}>3 Items</span></b>  </p>
+                <p style={{height:"14px"}}> <b>Cart Items: <span style={{color:"indigo"}}>{data.length} Items</span></b>  </p>
                <Link to="/address" ><button className="gopro"> <b> PROCEED TO CHECKOUT</b></button></Link> 
             </div>
             </div>
@@ -91,12 +103,12 @@ getData()
                 <div className="summary">
                 <p><b>Order Summary</b></p>
                 <div className="payment1">
-                <p>3 Items</p>
+                <p>{data.length} Items</p>
                 <TriangleDownIcon/>
                 </div>
                 <div className="payment1">
                 <p>Merchandise:</p>
-                <p>$987.83</p>
+                <p>${sum}</p>
                 </div>
                 <div className="payment1">
                 <p>Passport Shipping:</p>
@@ -104,20 +116,20 @@ getData()
                 </div>
                 <div className="payment1">
                 <p>Total before tax:</p>
-                <p>$987.83</p>
+                <p>${sum}</p>
                 </div>
                 <div className="payment1">
                 <p>Taxes:</p>
-                <p>$7.18</p>
+                <p>$0.00</p>
                 </div>
                 <hr />
                 <div className="payment2">
                 <p> <b>Order Total</b> </p>
-                <p> <b> $1,029.83</b></p>
+                <p> <b> ${sum}</b></p>
                 </div>
                 <div className="payment3">
                 <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltc723326dc66beda5/image-20220307-142252.png" alt="abc" height="30px" />
-                <CheckCircleIcon w={70} h={24} color="#00C876"/>
+                {/* <CheckCircleIcon w={40} h={24} color="#00C876"/> */}
                 </div>
                 <p style={{fontSize:"14px"}}>
                 Has been added to your cart for $19.99 for your first year. Automatically renews, you can cancel any time. Enjoy FREE SHIPPING/NO SERVICE CHARGE* benefits and perks for a year.
@@ -127,6 +139,8 @@ getData()
                 
             </div>
         </div>
+            <Footer/>
+        </>
     )
 }
 
