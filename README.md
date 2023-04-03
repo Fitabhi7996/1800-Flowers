@@ -6,7 +6,7 @@ Project: make a clone of 1800flowers website.
 
 Original-Website: https://www.1800flowers.com/
 
-Cloned-Website: https://flower18.netlify.app/
+Cloned-Website: https://startling-cupcake-81c8da.netlify.app/
 
 <h4 align="center">Frontend:</h4>
 
