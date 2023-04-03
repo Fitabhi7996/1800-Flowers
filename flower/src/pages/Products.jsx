@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import { ChevronDownIcon } from "@chakra-ui/icons";
-
+import Footer from "../components/Landing/Footer";
 import ProductCard from "../components/ProductCard";
 
 export const Products = () => {
@@ -422,7 +422,7 @@ export const Products = () => {
       <br />
       <hr />
       
-      
+      <Footer/>
     </>
    
   );

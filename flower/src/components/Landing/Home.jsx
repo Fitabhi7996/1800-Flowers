@@ -5,6 +5,7 @@ import secondSnap from "./images/Second.png"
 import thirdSnap from "./images/Third.png"
 import fourthSnap from "./images/Fourth.png"
 import fifthSnap from "./images/Fifth.png"
+import Footer from './Footer'
 
 
 
@@ -24,7 +25,7 @@ const cardData = [{ img: "https://cdn1.1800flowers.com/wcsstore/Flowers/images/c
 
 
 const Home = () => {
-  return (
+  return (<>
     <div style={{ marginBottom: "15px" }}>
       
       {/* ======================================First Snap================================== */}
@@ -155,7 +156,7 @@ const Home = () => {
       </div>
 
     </div>
-
+<Footer/></>
 
   )
 }

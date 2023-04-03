@@ -101,6 +101,7 @@ accent-color: blue;
     justify-content: space-around;
     font-size: 12px;
     margin-top: 20px;
+    height: 30px;
 }
 
 .check{
@@ -140,7 +141,7 @@ accent-color: blue;
 .zip{
     border: none;
 }
-.code{
+.code10{
     display: flex;
    border-bottom: 1px solid black;
     justify-content: center;
@@ -149,7 +150,7 @@ accent-color: blue;
 
    
 }
-.left{
+.left10{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -157,7 +158,7 @@ accent-color: blue;
     border-right: 1px solid black;
     /* height: 25px; */
 }
-.right{
+.right10{
     width: 50%;
     /* border: 2px solid black; */
     padding-left: 30px;

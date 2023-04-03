@@ -4,6 +4,7 @@ import { Select } from '@chakra-ui/react';
 import { PhoneIcon, AddIcon, CalendarIcon } from '@chakra-ui/icons'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../components/Landing/Footer";
 import axios from "axios";
 function Productdetail(){
 const [shift,setShift]=useState("false");
@@ -50,7 +51,7 @@ useEffect(()=>{
 
 
 
-    return(
+    return(<>
         <div className="product">
             <div className="imgages">
                 <div>
@@ -109,12 +110,12 @@ useEffect(()=>{
                         <p><b>2. Enter Delivery Destination</b></p>
                         <p  style={{color:"indigo"}}> <b>Sign in to access your address book</b> </p>
                     </div>
-                    <div className="code">
-                        <div className="left">
+                    <div className="code10">
+                        <div className="left10">
                             <input type="text" className="zip" placeholder="Delivery Zip 
                             Code"/>
                         </div>
-                        <div className="right"> 
+                        <div className="right10"> 
                             <p>Location Type</p>
                             <select name="type" className="type1">
                                 <option value="Business">Business</option>
@@ -131,6 +132,8 @@ useEffect(()=>{
             </div>
             
         </div>
+        <Footer/>
+        </>
     )
 }
 

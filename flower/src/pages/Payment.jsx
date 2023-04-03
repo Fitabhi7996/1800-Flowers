@@ -3,7 +3,7 @@ import { CheckCircleIcon, TriangleDownIcon, DeleteIcon } from '@chakra-ui/icons'
 import "./Payment.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../components/Landing/Footer";
 
 function Payment(){
 const [method,setMethod]=useState(false);
@@ -25,7 +25,7 @@ navigate("/");
 
 }
 
-    return(
+    return(<>
         <div className="main3">
         <div className="left3">
         <div className="address2">
@@ -154,7 +154,7 @@ navigate("/");
             </div>
             <div className="payment3">
             <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/bltc723326dc66beda5/image-20220307-142252.png" alt="abc" height="30px" />
-            <CheckCircleIcon w={70} h={24} color="#00C876"/>
+            {/* <CheckCircleIcon w={10} h={24} color="#00C876"/> */}
             </div>
             <p style={{fontSize:"14px"}}>
             Has been added to your cart for $19.99 for your first year. Automatically renews, you can cancel any time. Enjoy FREE SHIPPING/NO SERVICE CHARGE* benefits and perks for a year.
@@ -172,6 +172,8 @@ navigate("/");
             </div>
         </div>
     </div>
+    {/* <Footer/> */}
+    </>
     )
 }
 export default Payment;
