@@ -69,7 +69,7 @@
     font-size: 15px;
     border:1px solid #e8eaec;
     outline: none;
-    margin-top: 19px;
+    /* margin-top: 19px; */
     border-radius: 0;
     box-shadow: none;
 }
