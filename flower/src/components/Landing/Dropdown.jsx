@@ -17,7 +17,6 @@ import {
   Img,
 } from '@chakra-ui/react';
 
-
 import {
   HamburgerIcon,
   CloseIcon,
@@ -27,7 +26,7 @@ import {
 let count = 0;
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  
   return (
     <Box>
       <Flex
@@ -260,7 +259,7 @@ const MobileNavItem = ({ label, children, href }) => {
             Subid:count++,
           label: 'Easter',
           subLabel: ['Trending Design to inspire you',"Centerpieces","Flowers","Flower & Berries","Gift For Kids","Lilies","Plants","Spring Bulb Event:Free Gift"],
-          href: './Products',
+          href: "",
         },
         {
             Subid:count++,
