@@ -57,8 +57,7 @@
     display: flex;
     /* border:1px solid black; */
     width:55%;
-    align-items: center;
-    justify-content:end;
+    flex-direction: column;
     /* height:65px; */
 }
 .search input{
@@ -72,6 +71,7 @@
     /* margin-top: 19px; */
     border-radius: 0;
     box-shadow: none;
+    display: flex;
 }
 .search button{
     width:16%;
@@ -82,6 +82,23 @@
     font-weight: 600;
     border: #65388b;
     border-radius: 0;
+}
+
+.dropdown1{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+}
+
+.dropdown1:empty{
+    border: none;
+}
+
+.dropdown1-row{
+    cursor: pointer;
+    text-align: center;
+    margin: 2px 0;
 }
 
 
