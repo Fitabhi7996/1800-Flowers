@@ -10,17 +10,19 @@ import {
   Box,
   Input
 } from "@chakra-ui/react";
+import axios from "axios";
 
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Footer from "../components/Landing/Footer";
 import ProductCard from "../components/ProductCard";
-
+import FetchSearchData from "./FetchSearchData";
 export const Products = () => {
   const [cat, setCat] = React.useState("Easter");
   const [data, setData] = useState([]);
   const [count,setCount]=useState(0);
+  const [query, setQuery] = useState("");
   
-  const [val,setVal]=useState("");
+  // const [val,setVal]=useState("");
 
 
 
@@ -57,16 +59,6 @@ export const Products = () => {
     setData(lowdata);
   };
 
-  const handleInputChange = (event) => {
-    const val= event.target.value.toLowerCase();
-    setVal(val);
-    const filteredData = data.filter((item) =>
-      item.title.includes(val)
-    );
-    setData(filteredData);
-  };
-
-
   return (
     <>
   
@@ -90,13 +82,6 @@ export const Products = () => {
         >
           High to Low
         </Button>
-
-        <Input w={"30%"} border={"1px solid grey"}
-              type="text"
-              value={val}
-              onChange={handleInputChange}
-              placeholder="Search......"
-            />
       </Box>
       <br />
       
