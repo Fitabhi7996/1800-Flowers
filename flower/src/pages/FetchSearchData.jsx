@@ -1,7 +1,7 @@
 import axios from "axios";
 const FetchSearchData = (query) => {
   return axios.get(
-    `https://flowers18.onrender.com/flowers?q=${query}`
+    `https://flowers180.onrender.com/flowers?q=${query}`
   );
 };
 

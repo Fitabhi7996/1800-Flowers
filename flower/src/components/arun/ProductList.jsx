@@ -13,7 +13,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     const res = await axios
-      .get("https://flowers18.onrender.com/flowers")
+      .get("https://flowers180.onrender.com/flowers")
       .then(
         (res) =>
         setProducts(
@@ -27,7 +27,7 @@ const ProductList = () => {
 
   const handleDeleteProduct = async (id) => {
     const res = await axios.delete(
-      `https://flowers18.onrender.com/flowers/${id}`
+      `https://flowers180.onrender.com/flowers/${id}`
     );
     fetchProducts();
   };

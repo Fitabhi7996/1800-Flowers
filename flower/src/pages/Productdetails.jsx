@@ -6,9 +6,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Landing/Footer";
 import axios from "axios";
+import { Navigate, useNavigate } from 'react-router-dom'
+
 function Productdetail(){
 const [shift,setShift]=useState("false");
 const [data,setData]=useState({})
+const nav=useNavigate();
 
 const {id}=useParams();
 console.log(id);  
@@ -17,13 +20,15 @@ function Addtocart()
 
 {
     alert("Product added to the cart");
+    
     const obj={
         category:data.category,
         image:data.image,
         price:data.price,
         title:data.title
     }
-    axios.post(`https://flowers18.onrender.com/carts`,obj).then((res)=>console.log(res)).catch((err)=>console.log(err));
+    axios.post(`https://flowers180.onrender.com/carts`,obj).then((res)=>console.log(res)).catch((err)=>console.log(err));
+    nav("/cart")
 }
 
 
@@ -35,7 +40,7 @@ setShift(e.target.value);
 }
 
 const getData = (id) => {
-    fetch(`https://flowers18.onrender.com/flowers/${id}`)
+    fetch(`https://flowers180.onrender.com/flowers/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -61,7 +66,7 @@ useEffect(()=>{
             </div>
             <div className="photo">
                 {
-                    shift=="false"?<img src={data.image} alt="photos" width="100%" />:<img src={data.image1} alt="photos" width="100%" />
+                    shift==="false"?<img src={data.image} alt="photos" width="100%" />:<img src={data.image1} alt="photos" width="100%" />
                 }
                 {/* <img src="https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/192269cbx.jpg?width=545&height=597&quality=80&auto=webp&optimize={medium}" alt="photos" width="100%" /> */}
             </div>
@@ -125,7 +130,7 @@ useEffect(()=>{
                             </select>
                         </div>
                     </div>
-                    <button className="cart" onClick={Addtocart} ><p>Add to cart</p><CalendarIcon/></button>
+                    <button className="cart" onClick={Addtocart}  ><p>Add to cart</p><CalendarIcon/></button>
                     </div>
 
                

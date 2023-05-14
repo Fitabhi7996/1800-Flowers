@@ -9,14 +9,14 @@ const Userslist = () => {
   }, []);
   const fetchUsers = async () => {
     const res = await axios.get(
-      "https://flowers18.onrender.com/users"
+      "https://flowers180.onrender.com/users"
     );
     setUsers(res.data);
     console.log(res.data);
   };
   const handleDeleteUser = async (id) => {
     const res = await axios.delete(
-      `https://flowers18.onrender.com/users/${id}`
+      `https://flowers180.onrender.com/users/${id}`
     );
     fetchUsers();
   };
