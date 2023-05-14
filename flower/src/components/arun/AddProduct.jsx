@@ -21,7 +21,7 @@ export function AddProductForm() {
   };
   const handleAddProduct = async (newProduct) => {
     const res = await axios.post(
-      `https://flowers18.onrender.com/flowers`,
+      `https://flowers180.onrender.com/flowers`,
       newProduct
     );
     alert("Product added successfully");

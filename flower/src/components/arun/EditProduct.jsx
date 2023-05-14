@@ -14,7 +14,7 @@ const EditProduct = () => {
   useEffect(() => {
     async function fetchProduct() {
       const res = await axios.get(
-        `https://flowers18.onrender.com/flowers/${id}`
+        `https://flowers180.onrender.com/flowers/${id}`
       );
       setTitle(res.data.title);
       setPrice(res.data.price);
@@ -33,7 +33,7 @@ const EditProduct = () => {
   const navigate = useNavigate();
   const handleEditProduct = async (updatedProduct) => {
     const res = await axios.put(
-      `https://flowers18.onrender.com/flowers/${id}`,
+      `https://flowers180.onrender.com/flowers/${id}`,
       updatedProduct
     );
     alert("Product edited successfully");

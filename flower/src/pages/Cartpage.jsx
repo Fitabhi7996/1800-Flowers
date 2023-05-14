@@ -12,7 +12,7 @@ function Cartpage(){
 const [data,setData]=useState([]);
 
     const getData = () => {
-        fetch(`https://flowers18.onrender.com/carts`)
+        fetch(`https://flowers180.onrender.com/carts`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -21,7 +21,7 @@ const [data,setData]=useState([]);
       };
       function Deletedata(id){
         alert("Item removed from cart")
-        axios.delete(`https://flowers18.onrender.com/carts/${id}`).then((data)=>{console.log(data);
+        axios.delete(`https://flowers180.onrender.com/carts/${id}`).then((data)=>{console.log(data);
         getData()}).catch((err)=>console.log(err));
       }
 

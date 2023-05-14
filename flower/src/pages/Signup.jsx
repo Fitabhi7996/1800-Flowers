@@ -10,7 +10,7 @@ const Signup = () => {
   const verfiyform = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`https://flowers18.onrender.com/users`, {
+      await fetch(`https://flowers180.onrender.com/users`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(loginUser),

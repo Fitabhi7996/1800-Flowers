@@ -25,6 +25,11 @@ import { Link } from "react-router-dom";
 const Search = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const handleSearch = () => {
     FetchSearchData(query)
@@ -37,10 +42,28 @@ const Search = () => {
       });
   };
 
+  const fetchProducts = async () => {
+    const res = await axios
+      .get("https://flowers180.onrender.com/flowers")
+      .then(
+        (res) =>
+        setProducts(
+          res.data.map((product, index) => ({
+            ...product,
+            item_number: index + 1,
+          }))
+        )
+      );
+  };
+
   const [scrollBehavior, setScrollBehavior] = React.useState("inside");
 
   const btnRef = React.useRef(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <>
       <Flex
@@ -74,8 +97,8 @@ const Search = () => {
             <Box h={"auto"}>
               <Box>
                 <Input
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Enter KeyWord or Product Name"
                   onInput={handleSearch}
                   outline={"none"}
@@ -83,11 +106,10 @@ const Search = () => {
                 />
               </Box>
               <Box>
-                {query &&
-                  data.map((el, i) => {
+                {filteredProducts.map((el, i) => {
                     return (
                       <>
-                      <Link key={i} to="products">
+                      <Link key={i} to="/products">
                         <Flex
                           
                           alignItems={"center"}
