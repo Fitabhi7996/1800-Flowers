@@ -170,6 +170,51 @@
 }
 
 
+@media (max-width: 480px){
+    .first{
+        display: none;
+    }
+
+    .search{
+        display: none;
+    }
+    .signIn{
+        display: none;
+    }
+
+    .myOrder{
+        display: none;
+    }
+
+    .cart{
+        display: none;
+    }
+    .second{
+        display: none;
+    }
+
+}
+@media (min-width:481px) and (max-width:900px){
+    .first{
+        display: none;
+    }
+    .myOrder{
+        display: none;
+    }
+    .signIn{
+        width: 17%;
+        /* border: 1px solid black; */
+        /* margin-right: 40px; */
+    }
+    .cart{
+        width: 17%;
+        /* border: 1px solid black; */
+        /* margin-right: 40px; */
+    }
+
+
+}
+
 
 
 

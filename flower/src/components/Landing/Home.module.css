@@ -131,3 +131,42 @@
 .zoomInsta:hover img{
     transform: scale(1.3);
 }
+
+@media (max-width: 480px){
+    .flowerCard{
+        grid-template-columns: repeat(3,1fr);
+        gap: 7px;
+    }
+    .zoomHeading{
+        font-size: 21px;
+    }
+    .zoomwrapper{
+        max-width:93%;
+        grid-template-columns: repeat(3,1fr);
+        gap:10px;
+    }
+    .zoomwrapper p{
+        font-size: 1em;
+    }
+    .insta p{
+        font-size: 16px;
+
+    }
+    
+    .span{
+
+        font-size: 16px;
+    }
+    .insta img{
+        width: 100%;
+        height: 21px;
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 900px){
+    .flowerCard{
+        grid-template-columns: repeat(4,1fr);
+        gap: 7px;
+    }
+}
