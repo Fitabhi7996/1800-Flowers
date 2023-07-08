@@ -190,3 +190,124 @@ accent-color: blue;
     margin-left: 15px;
     margin-right: 15px;
 }
+
+@media (max-width: 768px) {
+    .product {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imgages {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    .imgages img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .photo {
+      width: 100%;
+    }
+  
+    .info {
+      text-align: center;
+      padding: 0;
+    }
+  
+    .offer {
+      width: 90%;
+    }
+  
+    .symbol {
+      height: 25px;
+    }
+  
+    .table {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .head {
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    .type {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .large {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .klara {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .klarna {
+      width: 100%;
+    }
+  
+    .last {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .ibutton {
+      margin-bottom: 10px;
+    }
+  
+    .address {
+      margin-top: 37px;
+      padding-bottom: 20px;
+    }
+  
+    .head2 {
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .zip {
+      width: 100%;
+    }
+  
+    .code10 {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom: none;
+    }
+  
+    .left10 {
+      width: 100%;
+      border-right: none;
+      margin-bottom: 10px;
+    }
+  
+    .right10 {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .type1 {
+      width: 100%;
+    }
+  
+    .cart {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
